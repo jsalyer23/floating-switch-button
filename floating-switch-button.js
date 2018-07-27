@@ -18,9 +18,14 @@ class FloatingSwitchButton extends HTMLElement {
 
 // TODO: Should maybe find a better name for these class names...not very intuitive
 // but floating-switch-button-container seems way too long
-const template = `
+const _template = `
   <div class="fs-btn-container">
     <div class="fs-btn">+</div>
-
+    <ul class='dropdown-selection'>
+      <li>First</li>
+      <li>Second</li>
+      <li>Third</li>
+      <li>Fourth</li>
+    </ul>
   </div>
 `;
