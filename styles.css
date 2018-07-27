@@ -1,0 +1,50 @@
+/*  Button Positioning */
+.fs-btn-container {
+  display: inline-block;
+  position: relative;
+  font-size: 16px;
+  font-family: "Arial";
+}
+
+/* Button Styles */
+.fs-btn {
+  background: #3498db;
+  min-width: 100px;
+  color: #fff;
+  letter-spacing: 0.025rem;
+  box-sizing: border-box;
+  padding: 10px 30px 10px 20px;
+  position: relative;
+  cursor: pointer;
+  transition: background .3s ease;
+}
+
+.fs-btn:hover {
+  background: #2980b9;
+  transition: background .3s ease;
+}
+
+/* Item Styles */
+/* TODO: Fix these... could be more specifically named */
+.fs-btn-container ul {
+  padding: 0;
+  list-style: none;
+  box-shadow: 0px 2px 6px 0 rgba(0,0,0,0.2);
+  position: absolute;
+  left: 0;
+  margin-top: 2px;
+  top: 100%;
+  min-width: 90%;
+}
+.fs-btn-container li {
+  background: #fff;
+  padding: 8px 10px 8px 15px;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: background .2s ease;
+}
+
+.fs-btn-container li:hover {
+  background: #f6f6f6;
+  transition: background .2s ease;
+}
