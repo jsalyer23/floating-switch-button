@@ -2,7 +2,7 @@
   "name": "floating-switch-button",
   "version": "1.0.1",
   "description": "Dynamic switch button for menu items with display and action properties.",
-  "main": "floating-switch-button.js",
+  "main": "main.js",
   "scripts": {
     "test": "mocha --reporter spec"
   },
