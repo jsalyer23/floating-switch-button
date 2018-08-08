@@ -1,3 +1,5 @@
+'use strict';
+
 String.prototype.capitalize = function () { return this.charAt(0).toUpperCase() + this.slice(1); };
 
 class FloatingSwitchButton extends HTMLElement {
@@ -95,7 +97,7 @@ class FloatingSwitchButton extends HTMLElement {
         }
 
       </style>
-      <div class="fs-btn-container">
+      <div class="fs-btn-container" id="fs-btn-90000000000000">
         <div class="fs-btn">+</div>
         <ul class='dropdown-selection'>
           <li>First</li>
