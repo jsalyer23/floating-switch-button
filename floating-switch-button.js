@@ -25,8 +25,10 @@ class FloatingSwitchButton extends HTMLElement {
     // name will always be 'items' due to observedAttributes()
     switch (name) {
       case 'items':
-        if (Array.isArray(newValue) && newValue.length > 0) { this._items = newValue; }
-        else { console.error(this._typeErrorDisplay(newValue)); }
+        // The component's attrs are passed in as Strings, convert to JSON
+        let jsonObj = JSON.parse(newValue);
+        if (Array.isArray(jsonObj) && newValue.length > 0) { this._items = jsonObj; }
+        else { console.error(this._typeErrorDisplay(jsonObj)); }
         break;
       default:
         console.error(this._attrErrorDisplay(name));
@@ -100,10 +102,18 @@ class FloatingSwitchButton extends HTMLElement {
           <li>Second</li>
           <li>Third</li>
           <li>Fourth</li>
+          ${this._createInnerItems()}
         </ul>
       </div>
     `;
     this.shadow.innerHTML = template;
+  }
+
+  _createInnerItems() {
+    console.log(this._items);
+    const banana = this._items.map(item => `<li>${item.display}, ${item.action}</li>`).concat();
+    console.log(banana);
+    return banana;
   }
 
   _typeErrorDisplay(val) {
