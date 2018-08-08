@@ -5,7 +5,7 @@ A small switch button component for menu items with a display and an action.
 
 ## Installation
 
-  `npm install @jsalyer23/floating-switch-button`
+  `npm install floating-switch-button`
 
 ## Usage
 
